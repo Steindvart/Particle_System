@@ -1,10 +1,15 @@
+#include <chrono>
+
 #include <SFML/Graphics.hpp>
 
-int main()
+#include "Particles/Particle.h"
+#include "Particles/ParticleBuilder.h"
+
+int main(int, char* [])
 {
 	sf::RenderWindow window(sf::VideoMode(200, 200), "SFML works!");
-	sf::CircleShape shape(100.f);
-	shape.setFillColor(sf::Color::Green);
+
+	Particle part1(ParticleBuilder::Circle(10.f, sf::Color::Green, sf::seconds(1)));
 
 	while (window.isOpen())
 	{
@@ -15,8 +20,10 @@ int main()
 				window.close();
 		}
 
+		part1.GetShape().setPosition(static_cast<sf::Vector2f>(sf::Mouse::getPosition(window)));
+
 		window.clear();
-		window.draw(shape);
+		window.draw(part1);
 		window.display();
 	}
 
