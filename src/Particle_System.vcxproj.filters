@@ -16,6 +16,9 @@
     <Filter Include="Source Files\Particles">
       <UniqueIdentifier>{21d2d84f-f912-4662-abf7-07f3789f8bc4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Core">
+      <UniqueIdentifier>{644c38c8-8879-4e25-9256-7df77b4c0093}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -27,8 +30,11 @@
     <ClCompile Include="Particles\ParticleBuilder.cpp">
       <Filter>Source Files\Particles</Filter>
     </ClCompile>
-    <ClCompile Include="Core.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Core\Core.cpp">
+      <Filter>Source Files\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Core\SettingsManager.cpp">
+      <Filter>Source Files\Core</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -38,8 +44,20 @@
     <ClInclude Include="Particles\ParticleBuilder.h">
       <Filter>Source Files\Particles</Filter>
     </ClInclude>
-    <ClInclude Include="Core.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Core\Core.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\GraphicsSettings.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\SettingsManager.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="Core\State.h">
+      <Filter>Source Files\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonUtils.h">
+      <Filter>Source Files\Core</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

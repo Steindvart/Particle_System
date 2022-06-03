@@ -10,10 +10,16 @@ Particle::Particle()
 
 }
 
-Particle::Particle(sf::Shape* shape, sf::Time lifeTime)
-	: m_shape(shape)
+Particle::Particle(std::unique_ptr<sf::Shape> shape, sf::Time lifeTime)
+	: m_shape(std::move(shape))
 	, m_lifeTime(lifeTime)
 {
+	std::cout << "Particle: create" << std::endl;
+}
+
+Particle::~Particle()
+{
+	std::cout << "Particle: destroy" << std::endl;
 }
 
 void Particle::draw(sf::RenderTarget& target, [[maybe_unused]] sf::RenderStates states) const

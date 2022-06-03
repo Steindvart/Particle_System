@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -163,13 +163,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="Core\Core.cpp" />
+    <ClCompile Include="Core\SettingsManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particles\Particle.cpp" />
     <ClCompile Include="Particles\ParticleBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Core.h" />
+    <ClInclude Include="CommonUtils.h" />
+    <ClInclude Include="Core\Core.h" />
+    <ClInclude Include="Core\SettingsManager.h" />
+    <ClInclude Include="Core\GraphicsSettings.h" />
+    <ClInclude Include="Core\State.h" />
     <ClInclude Include="Particles\Particle.h" />
     <ClInclude Include="Particles\ParticleBuilder.h" />
   </ItemGroup>

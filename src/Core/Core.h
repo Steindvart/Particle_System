@@ -5,14 +5,17 @@
 
 #include "SettingsManager.h"
 
-class Core
+class Core final
 {
 public:
 	void Run();
 
 private:
-	sf::RenderWindow m_window;
+	std::unique_ptr<sf::RenderWindow> m_window;
 	SettingsManager  m_settingsMgr;
+
+	//#TODO: enum for states
+	std::vector<int> m_states;
 
 	sf::Clock m_clock;
 	float	  m_dt;
