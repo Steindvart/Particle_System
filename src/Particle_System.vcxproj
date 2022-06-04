@@ -133,7 +133,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
-      <AdditionalIncludeDirectories>$(SolutionDir)libs\Include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)libs\Include;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -163,16 +163,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Core\Core.cpp" />
-    <ClCompile Include="Core\SettingsManager.cpp" />
+    <ClCompile Include="Core\Application.cpp" />
+    <ClCompile Include="Core\MainActionState.cpp" />
+    <ClCompile Include="Core\SettingsMgr.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Particles\Particle.cpp" />
     <ClCompile Include="Particles\ParticleBuilder.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CommonUtils.h" />
-    <ClInclude Include="Core\Core.h" />
-    <ClInclude Include="Core\SettingsManager.h" />
+    <ClInclude Include="Core\Application.h" />
+    <ClInclude Include="Core\MainActionState.h" />
+    <ClInclude Include="Core\SettingsMgr.h" />
     <ClInclude Include="Core\GraphicsSettings.h" />
     <ClInclude Include="Core\State.h" />
     <ClInclude Include="Particles\Particle.h" />

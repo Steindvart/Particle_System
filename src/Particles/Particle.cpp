@@ -22,7 +22,12 @@ Particle::~Particle()
 	std::cout << "Particle: destroy" << std::endl;
 }
 
-void Particle::draw(sf::RenderTarget& target, [[maybe_unused]] sf::RenderStates states) const
+void Particle::Update()
+{
+
+}
+
+void Particle::Render(sf::RenderTarget& target)
 {
 	target.draw(*m_shape);
 }

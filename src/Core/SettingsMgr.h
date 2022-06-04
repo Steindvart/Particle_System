@@ -2,7 +2,7 @@
 
 #include "GraphicsSettings.h"
 
-class SettingsManager
+class SettingsMgr
 {
 public:
 
